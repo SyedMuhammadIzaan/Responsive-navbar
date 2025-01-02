@@ -1,0 +1,62 @@
+@import "../abstracts/mixins/flex";
+@import "../abstracts/mixins/media";
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.verticalNavbar{
+    border: 2px solid red;
+
+    .closeIcon{
+        border: 2px solid purple;
+        @include flexProperty(row,flex-end,);
+        
+    }
+    .vertical-link{
+        @include flexProperty(column,flex-start,flex-start);
+        // border: 2px solid black;
+        height: 100%;
+        min-height: 80vh;
+    
+        a{
+            // border: 3px solid red;
+            font-size: 1.5rem;
+           padding: 10px 30px;
+           text-decoration: none;
+        }
+    }
+}
+
+
+.navbar {
+    border-bottom: 2px solid black;
+    @include flexProperty(row, space-between, center);
+    width: 100%;
+
+    .nav-link {
+        // border: 2px solid red;
+        width: 30%;
+        @include flexProperty(row,space-between);
+        
+        
+        @include respond-to(1024px){
+            width:35%;
+            @include flexProperty(row,space-evenly);
+        }
+        
+        @include respond-to(991px){
+            display: none;
+        }
+    }
+    .ham-icon{
+        display: none;
+    }
+
+    @include respond-to(991px){
+        .ham-icon{
+            display: block;
+        }
+    }
+
+}
