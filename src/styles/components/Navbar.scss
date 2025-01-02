@@ -5,25 +5,28 @@ body {
     margin: 0px;
     padding: 0px;
 }
-.verticalNavbar{
-    border: 2px solid red;
 
-    .closeIcon{
-        border: 2px solid purple;
-        @include flexProperty(row,flex-end,);
-        
+.verticalNavbar {
+    // border: 2px solid red;
+
+    .closeIcon {
+        // border: 2px solid purple;
+        @include flexProperty(row, flex-end, flex-end);
+        padding: 20px;
     }
-    .vertical-link{
-        @include flexProperty(column,flex-start,flex-start);
-        // border: 2px solid black;
+
+    .vertical-link {
+        @include flexProperty(column, flex-start, flex-start);
+        color:black;
         height: 100%;
         min-height: 80vh;
-    
-        a{
+
+        a {
             // border: 3px solid red;
-            font-size: 1.5rem;
-           padding: 10px 30px;
-           text-decoration: none;
+            font-size: 2rem;
+            color: black;
+            padding: 10px 30px;
+            text-decoration: none;
         }
     }
 }
@@ -33,28 +36,37 @@ body {
     border-bottom: 2px solid black;
     @include flexProperty(row, space-between, center);
     width: 100%;
+    font-size: 1.5rem;
+    padding: 0px 8px;
+
+    .logo{
+        p{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
 
     .nav-link {
         // border: 2px solid red;
-        width: 30%;
-        @include flexProperty(row,space-between);
-        
-        
-        @include respond-to(1024px){
-            width:35%;
-            @include flexProperty(row,space-evenly);
+        // font-weight: 600;
+        width: 45%;
+        @include flexProperty(row, space-evenly);
+
+        @include respond-to(1024px) {
+            @include flexProperty(row, space-evenly);
         }
-        
-        @include respond-to(991px){
+
+        @include respond-to(991px) {
             display: none;
         }
     }
-    .ham-icon{
+
+    .ham-icon {
         display: none;
     }
 
-    @include respond-to(991px){
-        .ham-icon{
+    @include respond-to(991px) {
+        .ham-icon {
             display: block;
         }
     }

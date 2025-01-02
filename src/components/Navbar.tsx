@@ -16,7 +16,8 @@ const Navbar = () => {
           ?
           <div className="verticalNavbar">
             <div className="closeIcon">
-              <button onClick={showNavLinks}><RxCross2 size={35}/></button>
+              <RxCross2 onClick={showNavLinks} size={40} />
+              {/* <button onClick={showNavLinks}><RxCross2 size={35}/></button> */}
             </div>
             <div className="vertical-link">
               <a href="">Home</a>
@@ -39,9 +40,9 @@ const Navbar = () => {
               <a>Faqs</a>
             </div>
             <div className="ham-icon">
-              <button onClick={showNavLinks}><RxHamburgerMenu /></button>
+              <RxHamburgerMenu size={35} onClick={showNavLinks} />
             </div>
-          </div >
+          </div>
       }
     </>
   )
